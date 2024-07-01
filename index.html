@@ -1,0 +1,69 @@
+<!-- index.html -->
+<html>
+<head>
+<title>Question Page</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-image: url('calm_grass_flats.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+</style>
+</head>
+<body>
+<h1>i have an surprie for ya</h1>
+<p>click yes to see it💀👻</p>
+<button onclick="location.href='yes.html'">Yes</button>
+<button id="noButton" onclick="randomPosition()">No</button>
+<script>
+var clickCount = 0;
+
+function randomPosition() {
+  clickCount++;
+  if (clickCount >= 5) {
+    alert("you broke my heart you piece fo shit");
+  }
+
+  var button = document.getElementById("noButton");
+  var windowWidth = window.innerWidth;
+  var windowHeight = window.innerHeight;
+  var buttonWidth = button.offsetWidth;
+  var buttonHeight = button.offsetHeight;
+
+  var newLeft = Math.floor(Math.random() * (windowWidth - buttonWidth));
+  var newTop = Math.floor(Math.random() * (windowHeight - buttonHeight));
+
+  button.style.position = "absolute";
+  button.style.left = newLeft + "px";
+  button.style.top = newTop + "px";
+
+  button.removeEventListener("click", randomPosition);
+}
+</script>
+</body>
+</html>

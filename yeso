@@ -1,0 +1,38 @@
+<!-- yes.html -->
+<html>
+<head>
+<title>Text Page</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-image: url('calm_grass_flats.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  font-size: 18px;
+  margin: 20px 0;
+}
+</style>
+</head>
+<body>
+    <h1>whoever comes here is gay</h1>
+    <p id="randomText"></p>
+    <script>
+    var texts = [
+      "i knew you were gay.",
+      "caught ya in 4k lmao."
+];
+
+var randomIndex = Math.floor(Math.random() * texts.length);
+document.getElementById("randomText").textContent = texts[randomIndex];
+</script>
+</body>
+</html>

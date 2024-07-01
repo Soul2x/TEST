@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>whoop i knew you were gay</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-image: url('calm_grass_flats.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+img {
+  display: block;
+  margin: 20px auto;
+}
+</style>
+</head>
+<body>
+<h1>whoever comes here is gay</h1>
+<p id="randomText"></p>
+<img src="gay.gif" alt="Loading GIF">
+<script>
+var texts = [
+  "hehe you got caught in 4k.",
+  "i knew you were gay.",
+  "lmao you are gay af."
+];
+
+var randomIndex = Math.floor(Math.random() * texts.length);
+document.getElementById("randomText").textContent = texts[randomIndex];
+</script>
+</body>
+</html>
